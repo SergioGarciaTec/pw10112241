@@ -4,10 +4,36 @@ body{
     margin: 0px auto;
     max-width: 1024px;
 }
-header{
+header{ 
     background:#D1E3EE ;
+}
+header nav{
+    background: blue;
+    border-radius: 5px;
+    margin: 0px auto;
+    padding: 2px 0px;  
+    width: 99%;
+}
+header nav form{
+    float: right;
+    margin-top: -35px;
+    margin-right: 10px;
+}
+header nav form input{
+    border-radius: 5px;
+}
+header nav form input[type="submit"]{
+    background: green;
+    border: 1px solid green;
+    color: white;
+}
+header nav ul li{
+    border: 1px solid red;
+    color: white;
+    display: inline-block;
+    margin-right: 20px;
 }
 #logo{  /* id="logo" */
     /* margin: -150px 0px 0px 0px; */
     margin-top: -150px;
-}
+}   
