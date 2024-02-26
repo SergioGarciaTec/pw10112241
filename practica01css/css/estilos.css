@@ -8,7 +8,7 @@ header{
     background:#D1E3EE ;
 }
 header nav{
-    background: blue;
+    background: rgb(43, 105, 197);
     border-radius: 5px;
     margin: 0px auto;
     padding: 2px 0px;  
@@ -37,3 +37,34 @@ header nav ul li{
     /* margin: -150px 0px 0px 0px; */
     margin-top: -150px;
 }   
+#seccion01{
+    margin-top: 10px;
+}
+#seccion01 article{
+    text-align: center;
+}
+#seccion01 article img{
+    border: 5px solid rgba(150, 150, 150, 0.3);
+    width: 98%;
+}
+#seccion02 article{
+    width: 33%;
+    vertical-align: top;
+    display: inline-block;
+}
+
+#seccion02 article input[type="submit"]{
+    background: white;
+    color: blue;
+    border-radius: 5px;
+    margin-left: 35%;
+}
+.nito{
+    font-weight: bold; /*Negritas*/
+}
+.otraSeccion{
+    font-size: 2.5em;
+}
+.unaSeccion{
+    font-size: 4.5em; /*4.5 X 16 */
+}
