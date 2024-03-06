@@ -47,7 +47,7 @@ header nav ul li{
     vertical-align: top;
 }
 #secc01art01{
-    /* border: solid red; */
+    /* border: solid red; */    
     width: 61%;
 }
 #secc01art02{
@@ -62,6 +62,26 @@ header nav ul li{
     color: #FF0099;
     content: "• ";
 }
+#secc03art04{
+    padding-top: 45px;
+}
+#segundaseccion article{
+    /* border: solid red; */
+    padding-right: 140px;
+    text-align: right;
+}
+#terceraseccion article{
+    display: inline-block;
+    vertical-align: top;
+    width: 23%;
+}
+#terceraseccion article img{
+    /*
+        Alineacion vertical del texto
+        que la rodea
+    */
+    vertical-align: middle;
+}
 .colorazul{
     color: #4267B3;
 }
@@ -74,6 +94,13 @@ header nav ul li{
 .letragrande{
     font-size: 3.5em; /* 3.5 X 16px */
 }
+.letramediana{
+    font-size: 2em;
+}
 .nito{
     font-weight: bold;
+}
+ooter{
+    color: blue;
+    background-color: blue;
 }
