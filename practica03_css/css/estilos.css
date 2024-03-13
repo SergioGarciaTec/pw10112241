@@ -1,20 +1,32 @@
 html{
+
     --color-verde: #849C3C;
     --color-negro: #353535;
     --color-rojo: #D33040;
     --color-gris: lightgray;
     --fondo-negro: #2C2C2C;
     --color-linea: #949494;
-    --color-azul: #lightblue;
-    --color-blanco: #white;
+    --color-azul: lightblue;
+    --color-blanco: white;
 }
 body{
     font-size: 16px;
     margin: 0 auto;
     max-width: 1024px;
 }
+footer article{
+    display: inline-block;
+    width: 31.1%;
+    margin-top: 20px;
+    padding: 10px;
+    vertical-align: top;
+}
+footer img{
+    width: 300px;
+}
 header ul li{
     display: inline-block;
+    margin-left: -10px;
     padding: 8px 14px;
     text-align: center;
     width: 17.0%;
@@ -63,11 +75,17 @@ section img{
     color: var(--color-azul);
 }
 .letra-blanca{
-    columns: var(--color-blanco);
+    color: var(--color-blanco);
 }
 .letra-gris{
     color: var(--color-linea);
 }
+.tam-menu-lateral{
+    font-size: 1.1em;
+}
 .tam-tarjetas{
     font-size: 1.7em;
+}
+.read-more{
+    margin-left: 200px;
 }
