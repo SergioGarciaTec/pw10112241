@@ -1,0 +1,9 @@
+body{
+    font-size: 16px;
+    margin: 0px auto;
+    max-width: 1024px;
+}
+header{
+    text-align: center;
+    background: #235e92;
+}
