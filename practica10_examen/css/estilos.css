@@ -1,0 +1,57 @@
+body {
+    font-size: 16px;
+    margin: 0 auto;
+    max-width: 1024px;
+}
+nav {
+    display: inline-block;
+    margin: 0 11%;
+}
+
+nav ul li {
+    color: gray;
+    display: inline-block;
+    margin: 0 20px;
+}
+
+#btnChangelog {
+    color: red;
+}
+
+#btnContact {
+    background-color: red;
+    color: white;
+}
+#seccion1art1{
+    display: inline-block;
+    vertical-align: top;
+    width: 33%;
+}
+#seccion1art2{
+    display: inline-block;
+    vertical-align: top;
+}
+#seccion02 {
+    margin-top: 100px;
+}
+
+#seccion02 article{
+    display: inline-block;
+    margin-top: 30px;
+    width: 23%;
+}
+.letra_grande {
+    font-size: 2.1rem;
+}
+
+.letra_mediana {
+    font-size: 1.7rem;
+}
+
+.letra_chica {
+    font-size: 1.2rem;
+}
+
+.negritas {
+    font-weight: bold;
+}
