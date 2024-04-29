@@ -11,7 +11,7 @@ app.use(cors());
 let conexion = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: ' ',
+    password: '',
     database: 'pwdata',
     port: '3306'
 });
@@ -36,6 +36,16 @@ app.get('/api/clientes',(req,res)=>{
             throw error;
         }else{
             res.send(filas);
+        }
+    });
+});
+//Seleccionamos un cliente en especifico
+app.get('/api/clientes/:id',(req,res)=>{
+    conexion.query('SELECT * from clientes WHERE id=?',[req.params.id],(error,fila)=>{
+        if(error){
+            throw error;
+        }else{
+            res.send(fila);
         }
     });
 });
