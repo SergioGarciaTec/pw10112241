@@ -17,41 +17,70 @@ let conexion = mysql.createConnection({
 });
 
 //Nos conectamos a MySql
-conexion.connect(function(error){
-    if(error){
+conexion.connect(function (error) {
+    if (error) {
         throw error;
-    }else{
+    } else {
         console.log('Conectado a la base de datos');
     }
 })
 //Rutas de acceso
-app.get("/",function(req,res){
+app.get("/", function (req, res) {
     res.send("Rutassssss de iniciosssss");
 })
 
 //Seleccionamos todos los clientes
-app.get('/api/clientes',(req,res)=>{
-    conexion.query('SELECT * FROM clientes',(error,filas)=>{
-        if(error){
+app.get('/api/clientes', (req, res) => {
+    conexion.query('SELECT * FROM clientes', (error, filas) => {
+        if (error) {
             throw error;
-        }else{
+        } else {
             res.send(filas);
         }
     });
 });
 //Seleccionamos un cliente en especifico
-app.get('/api/clientes/:id',(req,res)=>{
-    conexion.query('SELECT * from clientes WHERE id=?',[req.params.id],(error,fila)=>{
-        if(error){
+app.get('/api/clientes/:id', (req, res) => {
+    conexion.query('SELECT * from clientes WHERE id=?', [req.params.id], (error, fila) => {
+        if (error) {
             throw error;
-        }else{
+        } else {
             res.send(fila);
         }
     });
 });
+app.delete('/api/clientes/:id', (req,res) => {
+    let id = req.params.id;
+    conexion.query('DELETE FROM clientes WHERE id=?',[id],(error,filas)=>{
+        if(error){
+            throw error
+        }else{
+            res.send(filas)
+        }
+    })
+});
+//Insertar un nuevo cliente
+app.post('/api/clientes',(req,res)=>{
+    let data = {
+        id:req.body.id,
+        nombre:req.body.nombre,
+        direccion:req.body.direccion,
+        telefono:req.body.telefono,
+        rfc:req.body.rfc
+    }
+    let sql ="INSERT INTO clientes SET ?";
+    conexion.query(sql,data,(error,resultado)=>{
+        if(error){
+            throw error
+        }else{
+            res.send(resultado);
+        }
+    })
+});
+
 
 //Encender servidor
 let puerto = 3000;
-app.listen(puerto,function(){
-    console.log("Servidor escuchando puerto "+puerto);
+app.listen(puerto, function () {
+    console.log("Servidor escuchando puerto " + puerto);
 })
